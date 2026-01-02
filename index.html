@@ -3,35 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoPoint | Local Textile Recycling Collaboration</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>EcoPoint – Circular Textile Recycling</title>
   <style>
     :root {
-      --purple: #4b1d6b; /* deep purple accent */
-      --purple-soft: #efe6f5;
-      --text-dark: #1f1f1f;
-      --text-muted: #555;
+      --purple: #4b1f73;
+      --purple-dark: #361557;
+      --purple-light: #6d3aa3;
+      --bg-light: #f6f2fb;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
     body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
+      background-color: var(--bg-light);
+      color: #2c2c2c;
       line-height: 1.6;
-      background-color: #ffffff;
     }
 
     header {
-      background: linear-gradient(135deg, var(--purple), #2e0f45);
-      color: #fff;
-      padding: 5rem 2rem;
+      background: linear-gradient(135deg, var(--purple), var(--purple-light));
+      color: white;
+      padding: 4rem 2rem;
       text-align: center;
     }
 
     header h1 {
       font-size: 3rem;
-      font-weight: 700;
       margin-bottom: 1rem;
     }
 
@@ -39,69 +41,92 @@
       font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto;
-      opacity: 0.95;
+      color: white; /* explicitly white as requested */
     }
 
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     h2 {
-      font-size: 2rem;
+      color: var(--purple-dark);
       margin-bottom: 1.5rem;
-      color: var(--purple);
+      font-size: 2rem;
+      text-align: center;
     }
 
-    p {
-      margin-bottom: 1.2rem;
-      color: var(--text-muted);
-    }
-
-    .grid {
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
     }
 
     .card {
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
+      background: white;
       padding: 2rem;
-      background-color: #fafafa;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
     }
 
-    .card h3 {
-      color: var(--purple);
-      margin-bottom: 0.8rem;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .highlight {
-      background-color: var(--purple-soft);
-      border-left: 6px solid var(--purple);
-      padding: 2rem;
-      border-radius: 8px;
-      margin-top: 2rem;
+    .cta {
+      background: var(--purple-dark);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: white;
+      color: var(--purple-dark);
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .cta a:hover {
+      background: #e9ddf5;
     }
 
     footer {
-      background-color: #f5f5f5;
-      padding: 2rem;
+      background: #2a163d;
+      color: #d8cbe8;
       text-align: center;
-      font-size: 0.9rem;
-      color: #666;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.95rem;
     }
 
-    footer span {
-      color: var(--purple);
-      font-weight: 600;
+    footer p {
+      margin-bottom: 0.5rem;
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-      section { padding: 3rem 1.5rem; }
+    footer a {
+      color: #d8cbe8;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -109,47 +134,47 @@
 
   <header>
     <h1>EcoPoint</h1>
-    <p>A collaborative digital platform connecting consumers and fashion brands to enable local, transparent, and responsible textile recycling.</p>
+    <p>
+      A collaborative digital platform connecting consumers and fashion brands to enable local, transparent, and responsible textile recycling.
+    </p>
   </header>
 
   <section>
-    <h2>Project Vision</h2>
-    <p>
-      EcoPoint is designed to address the growing disconnect between clothing consumption and textile waste management. By bringing brands and end-users together through a single mobile platform, the project aims to enable traceable, local recycling pathways while supporting corporate sustainability commitments.
-    </p>
-
-    <div class="highlight">
-      <strong>Core Principle:</strong> Textile waste collected through EcoPoint remains within national borders and is directed exclusively to verified recycling partners — not incineration or offshore disposal.
-    </div>
-  </section>
-
-  <section>
     <h2>How EcoPoint Works</h2>
-    <div class="grid">
+    <div class="card-grid">
       <div class="card">
         <h3>For Consumers</h3>
-        <p>Users locate nearby participating brands, deposit used garments, and track the recycling pathway of their textiles.</p>
+        <p>
+          Locate nearby textile collection points, track your recycling impact, and earn rewards for responsible disposal of clothing.
+        </p>
       </div>
       <div class="card">
         <h3>For Brands</h3>
-        <p>Brands engage directly with consumers, document recycling outcomes, and strengthen sustainability reporting with verified data.</p>
+        <p>
+          Access a reliable stream of recyclable textiles, meet sustainability targets, and engage customers through circular initiatives.
+        </p>
       </div>
       <div class="card">
         <h3>For Recyclers</h3>
-        <p>Certified recyclers receive sorted, traceable textile streams, improving material recovery efficiency.</p>
+        <p>
+          Receive sorted, locally collected textile waste to improve recycling efficiency and reduce transportation emissions.
+        </p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Why It Matters</h2>
+  <section class="cta">
+    <h2>CALL TO ACTION – Join the Pilot Program</h2>
     <p>
-      Textile recycling is not only a waste-management challenge but also a climate issue. By prioritizing local processing and textile-to-textile recycling, EcoPoint supports emissions reduction, material circularity, and regulatory alignment.
+      Partner with us on circular fashion and help build a localized, transparent textile recycling ecosystem.
     </p>
+    <a href="mailto:recycle@ecopoint.app">Partner With Us on Circular Fashion</a>
   </section>
 
   <footer>
-    <p><span>EcoPoint</span> — Academic Concept Project | Sustainability & Circular Economy</p>
+    <p><strong>EcoPoint</strong></p>
+    <p>Bilkent Cyberpark, Çankaya / Ankara</p>
+    <p>Email: <a href="mailto:recycle@ecopoint.app">recycle@ecopoint.app</a></p>
   </footer>
 
 </body>
